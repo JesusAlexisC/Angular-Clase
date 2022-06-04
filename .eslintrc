@@ -1,0 +1,37 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+        "curly": "error",
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-restricted-imports": [
+            "error",
+            {
+                "paths": [
+                    "import1",
+                    "import2"
+                ],
+                "patterns": [
+                    "import1/private/*",
+                    "import2/*",
+                    "!import2/good"
+                ]
+            }
+        ]
+    }
+}
